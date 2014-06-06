@@ -20,6 +20,7 @@ get '/' => sub {
 	my $dto = $model->execute();
 
 	$self->stash( records => $dto->{"records"} );
+	$self->stash( title => $dto->{"title"} );
 	$self->render('sample');
 };
 
@@ -31,8 +32,9 @@ __DATA__
 % title 'Sample';
 DB の中身
 % for my $hash_ref (@{$records}){
-    <p><%= $hash_ref->{'name'} %></p>
+    <p>名前：<%= $hash_ref->{'name'} %>　年齢：<%= $hash_ref->{'old'} %></p>
 %}
+<br>たいとる：<%= $title %>
 
 @@ layouts/default.html.ep
 <!DOCTYPE html>
