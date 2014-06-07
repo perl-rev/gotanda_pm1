@@ -1,9 +1,10 @@
-#!/WWW/sfw/linux5/perl5/5.16/bin/perl
+#!/WWW/sfw/linux6/perl5/5.16/bin/perl
 
 #---------------------------------------------------------------------------
 # サンプル
 #---------------------------------------------------------------------------
 
+use lib '/WWW/sfw/linux6/perl5/5.16/local/lib/perl5';
 use lib $ENV{'DOCUMENT_ROOT'} . "/../perl/lib/";
 
 use Mojolicious::Lite;
