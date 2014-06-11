@@ -17,8 +17,6 @@ package Sample {
 		my ( $host, $dbname, $user, $passwd ) = ( 'localhost', 'perl_rev', 'perl_rev', 'perl_revp' );
 		my $dbh = Util->db_connect( $host, $dbname, $user, $passwd );
 
-		my ( $sth, $errstr, $warnings_cnt, $warnings );
-
 		my ( $sth, $errstr ) = Util->db_access( $dbh, $sql );
 
 		if( $errstr ){ return; } # すみません、エラーハンドリングは後日。。
