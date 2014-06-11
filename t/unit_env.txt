@@ -1,4 +1,9 @@
+# ローカルの設定に合わせてください。
+# このファイルはコミットしないでください。
+
 export UNIT_TEST_FLG=ON
+
+# 複数DBになった場合は、今後の課題
 export DB_UNIT_HOST=localhost
 export DB_UNIT_NAME=perl_rev_unit2
 export DB_UNIT_USER=perl_rev_unit2
