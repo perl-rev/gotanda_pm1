@@ -14,13 +14,17 @@ disp_usage(){
 	exit 1
 }
 
-if [ '-h' == $1 -o 'help' == $1 ]; then 
-	disp_usage
+if [ $# -ne 0 ]; then 
+	if [ '-h' = $1 ]; then disp_usage ;fi
+	if [ 'help' = $1 ]; then disp_usage; fi
 fi
 
 # 環境変数の設定 これで今後もOKか。。
 export PATH=/WWW/sfw/linux6/perl5/5.16/bin:$PATH
 export PERL5LIB="/WWW/sfw/linux6/perl5/5.16/local/lib/perl5:$PERL5LIB"
+
+# テスト用の設定を読み込み
+source "$(dirname $0)/unit_env.txt"
 
 # 関数ディレクトリのパスを含むように設定
 LIBDIR="$(dirname $0)/../perl/lib";

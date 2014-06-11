@@ -34,13 +34,13 @@ sub testExecuteSelect(){
 
 	# 1レコード目のチェック
 	my $record1 = @{$records}[0];
-	is $record1->{'name'}, 'saito'; # 名前
-	is $record1->{'old'} , '5';	# 年齢
+	is $record1->{'name'}, 'sakupan';	# 名前
+	is $record1->{'old'} , '24';		# 年齢
 
 	# 2レコード目のチェック
 	my $record2 = @{$records}[1];
-	is $record2->{'name'}, 'sakupan';	# 名前
-	is $record2->{'old'} , '6';		# 年齢
+	is $record2->{'name'}, 'saito';		# 名前
+	is $record2->{'old'} , '27';		# 年齢
 
 }
 

@@ -13,7 +13,7 @@ package Sample {
 
 		my $sql = 'select name , old from sample order by old ';
 
-		# TODO DB接続情報
+		# DB接続情報
 		my ( $host, $dbname, $user, $passwd ) = ( 'localhost', 'perl_rev', 'perl_rev', 'perl_revp' );
 		my $dbh = Util->db_connect( $host, $dbname, $user, $passwd );
 
