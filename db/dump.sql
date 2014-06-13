@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.1.73, for redhat-linux-gnu (x86_64)
 --
--- Host: localhost    Database: perl_rev_unit4
+-- Host: localhost    Database: perl_rev_unit2
 -- ------------------------------------------------------
 -- Server version	5.1.73
 
@@ -75,6 +75,30 @@ LOCK TABLES `comment_table` WRITE;
 /*!40000 ALTER TABLE `comment_table` DISABLE KEYS */;
 /*!40000 ALTER TABLE `comment_table` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `sample`
+--
+
+DROP TABLE IF EXISTS `sample`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sample` (
+  `seq` int(11) DEFAULT NULL,
+  `name` varchar(100) DEFAULT NULL,
+  `old` int(11) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sample`
+--
+
+LOCK TABLES `sample` WRITE;
+/*!40000 ALTER TABLE `sample` DISABLE KEYS */;
+INSERT INTO `sample` VALUES (1,'sakupan',24),(2,'saito',27),(3,'naito',26);
+/*!40000 ALTER TABLE `sample` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -85,4 +109,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-06-07 17:03:03
+-- Dump completed on 2014-06-13 20:14:54

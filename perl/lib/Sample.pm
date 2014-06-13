@@ -11,7 +11,7 @@ package Sample {
 	sub execute(){
 		my $self = shift;
 
-		my $sql = 'select name , old from sample order by old ';
+		my $sql = 'select name , old from sample where old >= 25 order by old ';
 
 		# DB接続情報
 		my ( $host, $dbname, $user, $passwd ) = ( 'localhost', 'perl_rev', 'perl_rev', 'perl_revp' );
