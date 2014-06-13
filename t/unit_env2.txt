@@ -1,0 +1,10 @@
+# ローカルの設定に合わせてください。
+# このファイルはコミットしないでください。
+
+UNIT_TEST_FLG=ON
+
+# 複数DBになった場合は、今後の課題
+DB_UNIT_HOST=localhost
+DB_UNIT_NAME=perl_rev_unit2
+DB_UNIT_USER=perl_rev_unit2
+DB_UNIT_PASS=perl_rev_unit2p

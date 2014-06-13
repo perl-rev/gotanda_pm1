@@ -12,19 +12,12 @@
 # @par   修正履歴
 # version 1.0.0 :  2014.06.14 (YU) New Create @n
 ########################################################################
-use lib "/WWW/sfw/linux5/perl5/5.16/local/lib/perl5";
+use lib "/WWW/sfw/linux6/perl5/5.16/local/lib/perl5";
 use warnings;
 use strict;
 use Getopt::Long qw(:config posix_default no_ignore_case gnu_compat);
 use Data::Dumper;
 our $unit_env = &unit_info_get;
-
-########################################################################
-#   品目ディレクトリの抽出
-########################################################################
-my ( @getpwuid, $hinmoku );
-@getpwuid = getpwuid($>);
-$hinmoku  = $getpwuid[0];
 
 ########################################################################
 #   各種事前処理
