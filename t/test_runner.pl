@@ -7,8 +7,6 @@
 # @brief
 # @par   File Code
 #   UTF8
-# @par   Copyright
-#   2014 DNP DigitalCom CO.,LTD.
 # @par   修正履歴
 # version 1.0.0 :  2014.06.14 (YU) New Create @n
 ########################################################################
@@ -23,12 +21,17 @@ our $unit_env = &unit_info_get;
 #   各種事前処理
 ########################################################################
 my $com = $ARGV[0];
+my $INC = "/WWW/sfw/linux6/perl5/5.16/local/lib/perl5"; 
 my $lib="./../perl/lib";
 
-if ($com eq 'h' || $com eq 'h') {
+if (!$com){ 
+	print "command not found !"."\n";
+	exit;
+}elsif ($com eq 'h' || $com eq 'h') {
 	&disp_usage();
 }
-my $rtn = system("prove -r -I$lib $com");
+
+my $rtn = system("prove -fcr -I$lib --timer --trap $com");
 
 ########################################################################
 #   各種事前処理
@@ -49,7 +52,7 @@ sub unit_info_get {
 	my ( %unit_env );
 
 	#--- 環境情報ファイルパス ---#
-	my $unit_env_file = "./unit_env.txt";
+	my $unit_env_file = "./unit_env2.txt";    #mg_env形式、あとで調整
 	if ( -s $unit_env_file ) {
 		if ( open(IN,"$unit_env_file") ) {
 			binmode(IN, ":utf8");
