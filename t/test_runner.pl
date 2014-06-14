@@ -8,7 +8,7 @@
 # @par   File Code
 #   UTF8
 # @par   修正履歴
-# version 1.0.0 :  2014.06.14 (YU) New Create @n
+# version 1.0.1 :  2014.06.15 (YU) New Create @n
 ########################################################################
 use lib "/WWW/sfw/linux6/perl5/5.16/local/lib/perl5";
 use warnings;
