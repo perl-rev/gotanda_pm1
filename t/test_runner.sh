@@ -28,6 +28,8 @@ source "$(dirname $0)/unit_env.txt"
 
 # 関数ディレクトリのパスを含むように設定
 LIBDIR="$(dirname $0)/../perl/lib";
+# テスト用の共通モジュールも含むように設定
+LIBDIR2="$(dirname $0)/unitlib";
 
 # テスト対象ディレクトリの指定
 if [ $# -eq 0 ];then
@@ -37,4 +39,4 @@ else
 fi
 
 # テスト実行
-prove -r -I$LIBDIR $EXECDIR
+prove -r -I$LIBDIR -I$LIBDIR2 $EXECDIR
